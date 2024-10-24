@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products JSON</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #dddddd;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Product List (JSON)</h1>
+    <pre id="jsonOutput"></pre>
+
+    <script>
+        const products = [
+            {
+                "name": "Vintage T-shirt",
+                "description": "Tie-dye Grateful Dead T-shirt",
+                "price": "$35",
+                "categories": ["clothing", "vintage"]
+            },
+            {
+                "name": "Wireless Mouse",
+                "description": "Ergonomic wireless mouse with 1600 DPI",
+                "price": "$20",
+                "categories": ["electronics", "office"]
+            },
+            {
+                "name": "Bluetooth Headphones",
+                "description": "Noise-cancelling over-ear Bluetooth headphones",
+                "price": "$60",
+                "categories": ["electronics"]
+            },
+            {
+                "name": "Leather Jacket",
+                "description": "Stylish black leather jacket",
+                "price": "$120",
+                "categories": ["clothing"]
+            },
+            {
+                "name": "Classic Watch",
+                "description": "Elegant silver analog watch",
+                "price": "$150",
+                "categories": ["accessories", "vintage"]
+            },
+            {
+                "name": "Gaming Keyboard",
+                "description": "RGB mechanical keyboard with blue switches",
+                "price": "$80",
+                "categories": ["electronics"]
+            },
+            {
+                "name": "Backpack",
+                "description": "Durable outdoor backpack with water resistance",
+                "price": "$45",
+                "categories": ["clothing", "accessories"]
+            },
+            {
+                "name": "Vinyl Record",
+                "description": "Classic Beatles album on vinyl",
+                "price": "$25",
+                "categories": ["vintage"]
+            }
+        ];
+
+        const productsJSON = JSON.stringify(products, null, 2);
+        document.getElementById("jsonOutput").textContent = productsJSON;
+    </script>
+</body>
+</html>
